@@ -1,5 +1,3 @@
-import 'package:base_structure/screens/DynamicShimmerScreen.dart';
-import 'package:base_structure/screens/dashboard/dashboard_screen.dart';
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -8,6 +6,7 @@ import 'package:sizer/sizer.dart';
 
 import 'constants/common_fonts.dart';
 import 'screens/authentication/login/login_screen.dart';
+import 'screens/dashboard/dashboard_screen.dart';
 import 'screens/landing_screen/landing_screen.dart';
 import 'screens/post_list/post_list_screen.dart';
 import 'screens/product_list/product_list_screen.dart';
@@ -40,7 +39,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     super.initState();
     final window = WidgetsBinding.instance.window;
     window.onPlatformBrightnessChanged = () {
-      final brightness = window.platformBrightness;
+      /*final brightness =*/ window.platformBrightness;
     };
   }
 
@@ -108,7 +107,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               Routes.loginScreen: (context) => const LoginScreen(),
               Routes.postListScreen: (context) => const PostListScreen(),
               Routes.dashboardScreen: (context) => const DashboardScreen(),
-              Routes.shimmerScreen: (context) => const DynamicShimmerScreen(),
             },
           );
         }),

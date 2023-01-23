@@ -1,7 +1,7 @@
 base_structure
 2.17
-file:///Users/mtpldevices/Documents/android/base_structure/
-file:///Users/mtpldevices/Documents/android/base_structure/lib/
+file:///Users/mtpldevices/Documents/FlutterProject/Bhavesh/base_structure/
+file:///Users/mtpldevices/Documents/FlutterProject/Bhavesh/base_structure/lib/
 args
 2.12
 file:///Users/mtpldevices/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/args-2.3.1/
@@ -246,10 +246,6 @@ shared_preferences_windows
 2.12
 file:///Users/mtpldevices/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-2.1.2/
 file:///Users/mtpldevices/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-2.1.2/lib/
-shimmer
-2.12
-file:///Users/mtpldevices/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/shimmer-2.0.0/
-file:///Users/mtpldevices/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/shimmer-2.0.0/lib/
 sizer
 2.12
 file:///Users/mtpldevices/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/sizer-2.0.15/

@@ -37,7 +37,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onTap: () {
                 CM.callNextScreen(context, Routes.productList);
               },
-              child: CommonText(
+              child: const CommonText(
                 text: "Product List Page",
               ),
             ),
@@ -53,26 +53,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onTap: () {
                 CM.callNextScreen(context, Routes.postListScreen);
               },
-              child: CommonText(
+              child: const CommonText(
                 text: "Posts List With Pagination",
               ),
             ),
           ),
         ),
-        Card(
-          child: Container(
-            width: 100.w,
-            padding: EdgeInsets.all(4.w),
-            child: GestureDetector(
-              onTap: () {
-                CM.callNextScreen(context, Routes.shimmerScreen);
-              },
-              child: CommonText(
-                text: "Check for dynamic shimmer layout",
-              ),
-            ),
-          ),
-        )
       ],
     );
   }

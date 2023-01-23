@@ -74,9 +74,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
               shrinkWrap: true,
               columnCount: 2,
               crossAxisSpacing: 2.0,
-              isInLoadingState: isInLoadingState,
               mainAxisSpacing: 4.0,
-              enableShimmer: true,
+              isInLoadingState: isInLoadingState,
               listItemView: (ProductsResponse? item, int index) {
                 return Card(
                   child: Padding(

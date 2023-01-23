@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../components/custom_network_image.dart';
 import '../../utils/strings.dart';
 import 'bloc/post_bloc.dart';
 
@@ -25,7 +24,7 @@ class PostListScreen extends StatefulWidget {
 class _PostListScreenState extends State<PostListScreen> {
   /// variables to manage pagination
   int _page = 0;
-  final int _limit = 100;
+  final int _limit = 10;
   final bool _hasNextPage = true;
   int _totalSize = 0;
 
@@ -111,9 +110,8 @@ class _PostListScreenState extends State<PostListScreen> {
                     margin: EdgeInsets.all(2.w),
                     child: CustomListview(
                         controller: _controller,
-                        noDataFoundText: "Posts not found!",
                         isInLoadingState: isInLoadingState,
-                        enableShimmer: true,
+                        noDataFoundText: "Posts not found!",
                         listItemView: (PostsResponse? item, int index) {
                           return Card(
                               child: Container(
@@ -146,28 +144,6 @@ class _PostListScreenState extends State<PostListScreen> {
                           ));
                         },
                         dataList: postsList!),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: CustomNetworkImage(
-                                imageUrl:
-                                    "https://picsum.photos/id/237/200/300",
-                                width: 100,
-                                height: 100,
-                                shape: BoxShape.circle,
-                                enableShimmer: true,
-                                isInLoadingState: isInLoadingState),
-                          )
-                        ],
-                      )
-                    ],
                   ),
                 ),
                 if (_isLoadMoreRunning == true)

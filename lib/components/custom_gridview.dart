@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
-import 'package:sizer/sizer.dart';
 
 import '../screens/base_screen/no_data_found_screen.dart';
 import '../utils/cm_file.dart';
@@ -12,10 +10,9 @@ class CustomGridView<T> extends StatelessWidget {
   final String noDataFoundText;
   final int columnCount;
   final bool shrinkWrap;
-  final bool isInLoadingState;
-  final bool enableShimmer;
   final double crossAxisSpacing;
   final double mainAxisSpacing;
+  final bool isInLoadingState;
 
   const CustomGridView({
     Key? key,
@@ -24,10 +21,9 @@ class CustomGridView<T> extends StatelessWidget {
     this.noDataFoundText = "",
     this.columnCount = 2,
     this.shrinkWrap = false,
+    this.isInLoadingState = false,
     this.mainAxisSpacing = 5.0,
     this.crossAxisSpacing = 5.0,
-    this.isInLoadingState = false,
-    this.enableShimmer = false,
   }) : super(key: key);
 
   @override
@@ -44,31 +40,7 @@ class CustomGridView<T> extends StatelessWidget {
               return listItemView(dataList[index], index);
             })
         : isInLoadingState
-            ? enableShimmer
-                ? Shimmer.fromColors(
-                    baseColor:
-                        Theme.of(context).backgroundColor.withOpacity(0.7),
-                    highlightColor:
-                        Theme.of(context).backgroundColor.withOpacity(0.1),
-                    child: GridView.builder(
-                      itemCount: 10,
-                      itemBuilder: (context, index) {
-                        return Card(
-                          elevation: 1.0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: SizedBox(height: 10.h),
-                        );
-                      },
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: crossAxisSpacing,
-                        mainAxisSpacing: mainAxisSpacing,
-                      ),
-                    ),
-                  )
-                : CM.loadingView()
+            ? CM.loadingView()
             : NoDataFoundScreen(
                 noDataFoundText: noDataFoundText,
               );

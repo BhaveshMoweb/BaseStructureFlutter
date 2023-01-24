@@ -1,5 +1,5 @@
 ///    Created By Bhavesh Makwana on 10/01/23
-import 'package:base_structure/components/common_title_text.dart';
+import 'package:base_structure/components/custom_title_text.dart';
 import 'package:base_structure/screens/base_screen/base_screen.dart';
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:base_structure/utils/app_preference.dart';
@@ -86,18 +86,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       /// Login Header text
                       CM.sb(5.h),
-                      CommonTitleText(text: Strings.login),
+                      CustomTitleText(text: Strings.login),
 
                       /// email text field
                       CM.sb(5.h),
-                      CommonTextField(
+                      CustomTextField(
                         controller: emailController,
                         hint: Strings.email,
                       ),
 
                       /// password text field
                       CM.sb(2.h),
-                      CommonTextField(
+                      CustomTextField(
                         controller: passwordController,
                         hint: Strings.password,
                         isPassword: true,

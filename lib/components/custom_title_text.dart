@@ -2,12 +2,12 @@ import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 //ignore: must_be_immutable
-class CommonTitleText extends StatelessWidget {
+class CustomTitleText extends StatelessWidget {
   String text;
   TextAlign textAlign;
   int maxLine;
 
-  CommonTitleText(
+  CustomTitleText(
       {Key? key,
       this.text = "",
       this.textAlign = TextAlign.start,
@@ -16,7 +16,6 @@ class CommonTitleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Created custom common Text with medium display
     return Text(
       text,
       style: Theme.of(context)

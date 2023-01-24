@@ -1,4 +1,4 @@
-import 'package:base_structure/components/common_text.dart';
+import 'package:base_structure/components/custom_text.dart';
 import 'package:base_structure/constants/image_constant.dart';
 import 'package:base_structure/utils/cm_file.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class NoDataFoundScreen extends StatelessWidget {
       children: [
         Image.asset(ImageConstant.noDataFound),
         CM.sb(4.h),
-        CommonText(
+        CustomText(
             text: noDataFoundText.isEmpty
                 ? Strings.noDataFound
                 : noDataFoundText),

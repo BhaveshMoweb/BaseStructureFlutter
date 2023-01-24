@@ -38,6 +38,7 @@ class Strings {
   static const String loginSuccessMessage = "Login successfully done";
 }
 
+/// shared preference keys
 class Pref {
   static String langCode = "LANGUAGE_CODE";
   static String isInternetConnection = "internet_connection";

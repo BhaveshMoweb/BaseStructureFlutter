@@ -1,4 +1,4 @@
-import 'package:base_structure/components/common_title_text.dart';
+import 'package:base_structure/components/custom_title_text.dart';
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     /// Created toolbar for custom appbar
     return Consumer(builder: (context, ThemeModel themeNotifier, child) {
       return AppBar(
-        title: CommonTitleText(
+        title: CustomTitleText(
           text: title,
         ),
         actions: appbarActions == null

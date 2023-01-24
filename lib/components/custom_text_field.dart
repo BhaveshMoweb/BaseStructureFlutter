@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 import '../utils/app_colors.dart';
 
 //ignore: must_be_immutable
-class CommonTextField extends StatelessWidget {
+class CustomTextField extends StatelessWidget {
   final String? hint;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
@@ -27,7 +27,7 @@ class CommonTextField extends StatelessWidget {
   int? maxLines;
   int? minLines;
 
-  CommonTextField(
+  CustomTextField(
       {Key? key,
       this.hint,
       this.controller,

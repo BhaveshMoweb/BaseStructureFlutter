@@ -1,14 +1,14 @@
-import 'package:base_structure/components/common_text.dart';
 import 'package:base_structure/components/custom_gridview.dart';
 import 'package:base_structure/components/custom_network_image.dart';
+import 'package:base_structure/components/custom_text.dart';
 import 'package:base_structure/constants/image_constant.dart';
-import 'package:base_structure/source_n_repository/products/product_list_datasource.dart';
-import 'package:base_structure/source_n_repository/products/product_list_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../model/product_response.dart';
+import '../../source_n_repository/products/product_list_datasource.dart';
+import '../../source_n_repository/products/product_list_repository.dart';
 import '../../utils/strings.dart';
 import '../base_screen/base_screen.dart';
 import 'bloc/products_bloc.dart';
@@ -94,7 +94,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                         /// product title
                         SizedBox(
                             width: 80.w,
-                            child: CommonText(
+                            child: CustomText(
                               maxLine: 2,
                               text: item.title!,
                             )),

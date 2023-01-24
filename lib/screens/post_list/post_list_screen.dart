@@ -1,5 +1,5 @@
-import 'package:base_structure/components/common_text.dart';
 import 'package:base_structure/components/custom_listview.dart';
+import 'package:base_structure/components/custom_text.dart';
 import 'package:base_structure/model/posts_response.dart';
 import 'package:base_structure/screens/base_screen/base_screen.dart';
 import 'package:base_structure/source_n_repository/posts/post_list_datasource.dart';
@@ -121,7 +121,7 @@ class _PostListScreenState extends State<PostListScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 /// Title text
-                                CommonText(
+                                CustomText(
                                   text: "Title: " + item!.title!,
                                   maxLine: 2,
                                   textAlign: TextAlign.start,
@@ -134,7 +134,7 @@ class _PostListScreenState extends State<PostListScreen> {
                                 CM.sb(2.h),
 
                                 /// Body text
-                                CommonText(
+                                CustomText(
                                   text: "Description: " + item.body!,
                                   maxLine: 10,
                                   textAlign: TextAlign.start,

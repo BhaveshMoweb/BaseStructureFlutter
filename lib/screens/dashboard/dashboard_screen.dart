@@ -1,4 +1,4 @@
-import 'package:base_structure/components/common_text.dart';
+import 'package:base_structure/components/custom_text.dart';
 import 'package:base_structure/utils/cm_file.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -37,7 +37,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onTap: () {
                 CM.callNextScreen(context, Routes.productList);
               },
-              child: const CommonText(
+              child: const CustomText(
                 text: "Product List Page",
               ),
             ),
@@ -53,7 +53,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               onTap: () {
                 CM.callNextScreen(context, Routes.postListScreen);
               },
-              child: const CommonText(
+              child: const CustomText(
                 text: "Posts List With Pagination",
               ),
             ),

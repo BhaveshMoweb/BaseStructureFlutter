@@ -1,4 +1,4 @@
-import 'package:base_structure/components/common_text.dart';
+import 'package:base_structure/components/custom_text.dart';
 import 'package:base_structure/constants/image_constant.dart';
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -40,11 +40,11 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
             height: 50.w,
           ),
           CM.sb(5.h),
-          CommonText(
+          CustomText(
             text: Strings.internetConnectionLost,
           ),
           CM.sb(7.h),
-          CommonText(
+          CustomText(
             text: Strings.noInternetDesc,
             maxLine: 3,
             textAlign: TextAlign.center,

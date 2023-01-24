@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CommonText extends StatelessWidget {
+class CustomText extends StatelessWidget {
   final String text;
   final TextAlign textAlign;
   final int maxLine;
   final TextStyle? textStyle;
 
-  const CommonText({
+  const CustomText({
     Key? key,
     this.text = "",
     this.textAlign = TextAlign.start,

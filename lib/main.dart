@@ -1,3 +1,4 @@
+import 'package:base_structure/screens/all_widgets.dart';
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -62,11 +63,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           displayMedium: TextStyle(
             fontFamily: CommonFonts.sourceSansProSemiBold,
             color: AppColors.appBarHeadingColor,
-            fontSize: 16,
+            fontSize: 12.sp,
           ),
           headlineMedium: TextStyle(
               fontFamily: CommonFonts.sourceSansProSemiBold,
-              fontSize: 20,
+              fontSize: 16.sp,
               fontWeight: FontWeight.bold,
               color: AppColors.appBarHeadingColor),
         ),
@@ -79,11 +80,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           displayMedium: TextStyle(
             fontFamily: CommonFonts.sourceSansProSemiBold,
             color: AppColors.inputBackgroundColor,
-            fontSize: 16,
+            fontSize: 12.sp,
           ),
           headlineMedium: TextStyle(
               fontFamily: CommonFonts.sourceSansProSemiBold,
-              fontSize: 20,
+              fontSize: 16.sp,
               fontWeight: FontWeight.bold,
               color: AppColors.inputBackgroundColor),
         ),
@@ -107,6 +108,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               Routes.loginScreen: (context) => const LoginScreen(),
               Routes.postListScreen: (context) => const PostListScreen(),
               Routes.dashboardScreen: (context) => const DashboardScreen(),
+              Routes.allWidgets: (context) => const AllWidgets(),
             },
           );
         }),

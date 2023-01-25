@@ -1,11 +1,7 @@
-import 'package:base_structure/components/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sizer/sizer.dart';
 
-import '../utils/app_colors.dart';
-
-//ignore: must_be_immutable
+/// Created custom TextField with multiple properties for Input text.
 class CustomTextField extends StatelessWidget {
   final String? hint;
   final TextEditingController? controller;
@@ -21,16 +17,19 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String? val)? validator;
   final bool? isRequired;
   final bool? isPassword;
-  final bool? isForLogin;
   final Color textColor;
-  final bool? isMultiline;
+  final Color backgroundColor;
   final bool? enable;
-  int? maxLines;
-  int? minLines;
+  final int? maxLines;
+  final int? minLines;
+  final InputBorder? inputBorder;
+  final double? borderRadius;
+  final EdgeInsetsGeometry? padding;
 
   CustomTextField(
       {Key? key,
       this.hint,
+      this.padding,
       this.controller,
       this.keyboardType,
       this.errorText,
@@ -42,29 +41,26 @@ class CustomTextField extends StatelessWidget {
       this.onChanged,
       this.inputFormatters,
       this.validator,
-      this.isRequired,
-      this.isForLogin = false,
+      this.isRequired = false,
       this.isPassword = false,
       this.maxLines,
       this.minLines,
-      this.isMultiline = false,
+      this.borderRadius,
       this.enable,
-      this.textColor = const Color(0xff1C497E)})
-      : super(key: key);
+      this.textColor = const Color(0xff000000),
+      this.backgroundColor = const Color(0x00000000),
+      this.inputBorder})
+      : assert(!isPassword! || maxLines == 1,
+            'Password fields cannot be multiline.'),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    /*
-    - Created custom TextField with multiple properties for Input text.
-   */
     return Container(
-      height: isMultiline! ? 130 : 55,
-      padding: EdgeInsets.symmetric(horizontal: 6.w),
+      padding: padding ?? const EdgeInsets.only(left: 10, right: 10),
       decoration: BoxDecoration(
-        color: AppColors.inputBackgroundColor,
-        borderRadius: isForLogin == true
-            ? const BorderRadius.all(Radius.circular(27.5))
-            : const BorderRadius.all(Radius.circular(10)),
+        color: backgroundColor,
+        borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 10)),
       ),
       child: TextFormField(
         controller: controller,
@@ -78,17 +74,16 @@ class CustomTextField extends StatelessWidget {
         onChanged: onChanged,
         enabled: enable,
         obscureText: isPassword!,
-        style: Theme.of(context).textTheme.displayMedium,
+        style: Theme.of(context)
+            .textTheme
+            .displayMedium!
+            .copyWith(color: textColor),
         onEditingComplete: onEditingComplete,
         keyboardType: keyboardType,
-        cursorColor: AppColors.inputTextColor.withOpacity(0.5),
+        cursorColor: textColor,
         decoration: InputDecoration(
-          label: CustomText(
-            text: isRequired == true ? "$hint*" : hint!,
-          ),
-          border: InputBorder.none,
-          counterText: "",
-        ),
+            border: inputBorder,
+            hintText: isRequired == true ? "$hint*" : hint),
       ),
     );
   }

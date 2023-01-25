@@ -73,6 +73,7 @@ dependencies:
   # for to load network image with cache management
   extended_image: #^6.3.4
 
+  #bouncing_widget: ^2.0.0
 
 dev_dependencies:
   flutter_test:

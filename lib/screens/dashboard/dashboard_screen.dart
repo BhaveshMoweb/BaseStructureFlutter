@@ -59,6 +59,22 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
           ),
         ),
+
+        /// product list page card
+        Card(
+          child: Container(
+            width: 100.w,
+            padding: EdgeInsets.all(4.w),
+            child: GestureDetector(
+              onTap: () {
+                CM.callNextScreen(context, Routes.allWidgets);
+              },
+              child: const CustomText(
+                text: "All Widgets Screen",
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }

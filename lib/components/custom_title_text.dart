@@ -1,6 +1,7 @@
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
+/// This widget will used when we need to show title in the screen.
 class CustomTitleText extends StatelessWidget {
   final String text;
   final TextAlign textAlign;

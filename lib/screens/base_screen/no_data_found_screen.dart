@@ -30,7 +30,7 @@ class NoDataFoundScreen extends StatelessWidget {
           width: 40.w,
           title: Label.tryAgain,
           onClick: () {},
-          buttonColor: AppColors.primaryColor,
+          backgroundColor: AppColors.primaryColor,
           textStyle: Theme.of(context)
               .textTheme
               .displayMedium!

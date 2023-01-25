@@ -6,4 +6,5 @@ class Routes {
   static String postListScreen = "/Posts";
   static String dashboardScreen = "/DashboardScreen";
   static String shimmerScreen = "/ShimmerScreen";
+  static String allWidgets = "/allWidgets";
 }

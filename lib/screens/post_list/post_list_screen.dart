@@ -2,8 +2,7 @@ import 'package:base_structure/components/custom_listview.dart';
 import 'package:base_structure/components/custom_text.dart';
 import 'package:base_structure/model/posts_response.dart';
 import 'package:base_structure/screens/base_screen/base_screen.dart';
-import 'package:base_structure/source_n_repository/posts/post_list_datasource.dart';
-import 'package:base_structure/source_n_repository/posts/post_list_repository.dart';
+import 'package:base_structure/screens/post_list/data/post_list_datasource.dart';
 import 'package:base_structure/utils/cm_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,6 +10,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../utils/strings.dart';
 import 'bloc/post_bloc.dart';
+import 'data/post_list_repository.dart';
 
 ///    Created By Bhavesh Makwana on 18/01/23
 
@@ -61,7 +61,7 @@ class _PostListScreenState extends State<PostListScreen> {
   Widget build(BuildContext context) {
     return BaseScreen(
       body: getPostListBody(),
-      title: Strings.posts,
+      title: Label.posts,
       shouldShowBackButton: true,
     );
   }

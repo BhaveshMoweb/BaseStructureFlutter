@@ -8,11 +8,11 @@ class HandleAPI {
     try {
       if (e.toString().contains(
           "(OS Error: No address associated with hostname, errno = 7)")) {
-        return Strings.noInternet;
+        return Label.noInternet;
       }
       return e.toString();
     } catch (e) {
-      return Strings.somethingWentWrong;
+      return Label.somethingWentWrong;
     }
   }
 }

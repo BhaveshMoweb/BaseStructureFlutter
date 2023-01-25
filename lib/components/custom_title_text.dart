@@ -1,13 +1,12 @@
 import 'package:base_structure/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-//ignore: must_be_immutable
 class CustomTitleText extends StatelessWidget {
-  String text;
-  TextAlign textAlign;
-  int maxLine;
+  final String text;
+  final TextAlign textAlign;
+  final int maxLine;
 
-  CustomTitleText(
+  const CustomTitleText(
       {Key? key,
       this.text = "",
       this.textAlign = TextAlign.start,

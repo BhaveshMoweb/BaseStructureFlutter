@@ -1,5 +1,5 @@
 /// Strings class
-class Strings {
+class Label {
   /// ******************* Screen Wise Texts ***********************
   /// Login Screen
   static const String login = "Login";

@@ -68,7 +68,7 @@ class _ProgressiveButtonState extends State<ProgressiveButton> {
         if (await CM.checkInternet()) {
           widget.onPressed!();
         } else {
-          CM.showCustomToast(context, Strings.noInternet, isError: true);
+          CM.showCustomToast(context, Label.noInternet, isError: true);
         }
       },
       state: widget.buttonState,

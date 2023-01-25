@@ -23,13 +23,12 @@ class NoDataFoundScreen extends StatelessWidget {
         Image.asset(ImageConstant.noDataFound),
         CM.sb(4.h),
         CustomText(
-            text: noDataFoundText.isEmpty
-                ? Strings.noDataFound
-                : noDataFoundText),
+            text:
+                noDataFoundText.isEmpty ? Label.noDataFound : noDataFoundText),
         CM.sb(5.h),
         CustomButton(
           width: 40.w,
-          title: Strings.tryAgain,
+          title: Label.tryAgain,
           onClick: () {},
           buttonColor: AppColors.primaryColor,
           textStyle: Theme.of(context)

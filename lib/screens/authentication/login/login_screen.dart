@@ -11,12 +11,12 @@ import 'package:sizer/sizer.dart';
 import '../../../components/custom_text_field.dart';
 import '../../../components/progressive_button.dart';
 import '../../../model/login_request.dart';
-import '../../../source_n_repository/authentication/authentication_datasource.dart';
-import '../../../source_n_repository/authentication/authentication_repository.dart';
 import '../../../utils/cm_file.dart';
 import '../../../utils/routes.dart';
 import '../../../utils/strings.dart';
 import 'bloc/login_bloc.dart';
+import 'data/authentication_datasource.dart';
+import 'data/authentication_repository.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
             /// login success state
             if (state is LoginStateSuccess) {
               buttonState = ButtonState.success;
-              CM.showCustomToast(context, Strings.loginSuccessMessage,
+              CM.showCustomToast(context, Label.loginSuccessMessage,
                   isError: false);
               AppPreference.instance.savePrefBoolean(Pref.isLoggedIn, true);
               Navigator.pushNamedAndRemoveUntil(
@@ -86,27 +86,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       /// Login Header text
                       CM.sb(5.h),
-                      CustomTitleText(text: Strings.login),
+                      CustomTitleText(text: Label.login),
 
                       /// email text field
                       CM.sb(5.h),
                       CustomTextField(
                         controller: emailController,
-                        hint: Strings.email,
+                        hint: Label.email,
                       ),
 
                       /// password text field
                       CM.sb(2.h),
                       CustomTextField(
                         controller: passwordController,
-                        hint: Strings.password,
+                        hint: Label.password,
                         isPassword: true,
                       ),
 
                       /// Login Button
                       CM.sb(10.h),
                       ProgressiveButton(
-                        title: Strings.login,
+                        title: Label.login,
                         initialButtonColor: AppColors.appBarHeadingColor,
                         onPressed: () {
                           serverCallForLogin();
@@ -127,9 +127,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void serverCallForLogin() {
     if (emailController.text.toString().trim().isEmpty) {
-      CM.showCustomToast(context, Strings.errEmptyEmail, isError: true);
+      CM.showCustomToast(context, Label.errEmptyEmail, isError: true);
     } else if (passwordController.text.toString().trim().isEmpty) {
-      CM.showCustomToast(context, Strings.errEmptyEmail, isError: true);
+      CM.showCustomToast(context, Label.errEmptyEmail, isError: true);
     } else {
       LoginRequest loginRequest = LoginRequest(
         username: emailController.text,

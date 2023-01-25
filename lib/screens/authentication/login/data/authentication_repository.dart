@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:base_structure/utils/strings.dart';
 
-import '../../api_helper/api_result.dart';
-import '../../constants/handle_api_error.dart';
-import '../../model/login_request.dart';
-import '../../model/login_response.dart';
-import '../../utils/app_preference.dart';
+import '../../../../api_helper/api_result.dart';
+import '../../../../constants/handle_api_error.dart';
+import '../../../../model/login_request.dart';
+import '../../../../model/login_response.dart';
+import '../../../../utils/app_preference.dart';
 import 'authentication_datasource.dart';
 
 enum AuthenticationStatus { unknown, authenticated, unauthenticated }
@@ -33,7 +33,7 @@ class AuthenticationRepository {
         await AppPreference.instance.saveLoginResponse(loginResponse);
         return ApiResult.success(data: loginResponse);
       } else {
-        return const ApiResult.failure(error: Strings.somethingWentWrong);
+        return const ApiResult.failure(error: Label.somethingWentWrong);
       }
     } catch (e) {
       final message = HandleAPI.handleAPIError(e);

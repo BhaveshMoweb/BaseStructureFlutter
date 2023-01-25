@@ -7,11 +7,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../model/product_response.dart';
-import '../../source_n_repository/products/product_list_datasource.dart';
-import '../../source_n_repository/products/product_list_repository.dart';
 import '../../utils/strings.dart';
 import '../base_screen/base_screen.dart';
 import 'bloc/products_bloc.dart';
+import 'data/product_list_datasource.dart';
+import 'data/product_list_repository.dart';
 
 ///    Created By Bhavesh Makwana on 11/01/23
 class ProductListScreen extends StatefulWidget {
@@ -42,7 +42,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
   Widget build(BuildContext context) {
     return BaseScreen(
       body: getListScreenBody(),
-      title: Strings.productList,
+      title: Label.productList,
       shouldShowBackButton: true,
     );
   }

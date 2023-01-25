@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../model/login_request.dart';
 import '../../../../model/login_response.dart';
-import '../../../../source_n_repository/authentication/authentication_repository.dart';
+import '../data/authentication_repository.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';

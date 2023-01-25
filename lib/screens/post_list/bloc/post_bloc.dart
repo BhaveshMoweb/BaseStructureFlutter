@@ -2,7 +2,7 @@ import 'package:base_structure/model/posts_response.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../../source_n_repository/posts/post_list_repository.dart';
+import '../data/post_list_repository.dart';
 
 part 'post_event.dart';
 part 'post_state.dart';

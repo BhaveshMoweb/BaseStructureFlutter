@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
 import '../../../model/product_response.dart';
-import '../../../source_n_repository/products/product_list_repository.dart';
+import '../data/product_list_repository.dart';
 
 part 'products_event.dart';
 part 'products_state.dart';

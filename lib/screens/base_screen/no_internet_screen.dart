@@ -40,12 +40,12 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
             height: 50.w,
           ),
           CM.sb(5.h),
-          CustomText(
-            text: Strings.internetConnectionLost,
+          const CustomText(
+            text: Label.internetConnectionLost,
           ),
           CM.sb(7.h),
-          CustomText(
-            text: Strings.noInternetDesc,
+          const CustomText(
+            text: Label.noInternetDesc,
             maxLine: 3,
             textAlign: TextAlign.center,
           ),

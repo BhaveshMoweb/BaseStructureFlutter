@@ -59,7 +59,7 @@ class _BaseScreenState extends State<BaseScreen> {
           if (connectionStatus.value == "Online") {
             connectionStatus.value = "Offline";
             Future.delayed(Duration.zero, () async {
-              CM.showCustomToast(context, Strings.youAreOffline,
+              CM.showCustomToast(context, Label.youAreOffline,
                   isOffline: true, verticalMargin: 11);
             });
           }
@@ -69,7 +69,7 @@ class _BaseScreenState extends State<BaseScreen> {
             AppPreference.instance
                 .savePrefString(Pref.isInternetConnection, "Online");
             Future.delayed(Duration.zero, () async {
-              CM.showCustomToast(context, Strings.youAreOnline,
+              CM.showCustomToast(context, Label.youAreOnline,
                   verticalMargin: 11);
             });
           }

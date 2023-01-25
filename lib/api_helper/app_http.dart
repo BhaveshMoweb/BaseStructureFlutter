@@ -30,7 +30,7 @@ class HttpActions {
       log(utf8.decode(response.bodyBytes));
       return jsonDecode(utf8.decode(response.bodyBytes));
     } else {
-      Future.error(Strings.noInternet);
+      Future.error(Label.noInternet);
     }
   }
 
@@ -45,7 +45,7 @@ class HttpActions {
           body: data, headers: headers);
       return jsonDecode(utf8.decode(response.bodyBytes));
     } else {
-      Future.error(Strings.noInternet);
+      Future.error(Label.noInternet);
     }
   }
 
@@ -63,7 +63,7 @@ class HttpActions {
       }
       return jsonDecode(utf8.decode(response.bodyBytes));
     } else {
-      Future.error(Strings.noInternet);
+      Future.error(Label.noInternet);
     }
   }
 
@@ -76,7 +76,7 @@ class HttpActions {
           await http.get(Uri.parse(baseUrl + url), headers: headers);
       return response.bodyBytes;
     } else {
-      return Future.error(Strings.noInternet);
+      return Future.error(Label.noInternet);
     }
   }
 
@@ -88,7 +88,7 @@ class HttpActions {
           body: data, headers: headers);
       return jsonDecode(utf8.decode(response.bodyBytes));
     } else {
-      Future.error(Strings.noInternet);
+      Future.error(Label.noInternet);
     }
   }
 
@@ -102,7 +102,7 @@ class HttpActions {
           body: data, headers: headers);
       return jsonDecode(utf8.decode(response.bodyBytes));
     } else {
-      Future.error(Strings.noInternet);
+      Future.error(Label.noInternet);
     }
   }
 
@@ -115,7 +115,7 @@ class HttpActions {
           body: data, headers: headers);
       return jsonDecode("${response.statusCode}");
     } else {
-      Future.error(Strings.noInternet);
+      Future.error(Label.noInternet);
     }
   }
 
@@ -216,7 +216,7 @@ class HttpActions {
     if (statusCode ~/ 100 != 2) {
       CM.hideProgressDialog();
       throw Exception(
-          '${Strings.somethingWentWrong} : ${httpResponse.statusCode}');
+          '${Label.somethingWentWrong} : ${httpResponse.statusCode}');
     } else {
       return httpResponse;
     }

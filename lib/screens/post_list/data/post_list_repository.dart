@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:base_structure/model/posts_response.dart';
 
-import '../../api_helper/api_result.dart';
-import '../../constants/handle_api_error.dart';
-import '../../utils/strings.dart';
+import '../../../api_helper/api_result.dart';
+import '../../../constants/handle_api_error.dart';
+import '../../../utils/strings.dart';
 import 'post_list_datasource.dart';
 
 /// Repository class for Posts
@@ -30,7 +30,7 @@ class PostListRepository {
       if ((result[0] as Map).containsKey("id")) {
         return ApiResult.success(data: postsResponse);
       } else {
-        return const ApiResult.failure(error: Strings.somethingWentWrong);
+        return const ApiResult.failure(error: Label.somethingWentWrong);
       }
     } catch (e) {
       final message = HandleAPI.handleAPIError(e);

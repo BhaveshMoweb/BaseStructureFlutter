@@ -1,3 +1,4 @@
+import 'package:base_structure/components/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
@@ -82,9 +83,8 @@ class CustomTextField extends StatelessWidget {
         keyboardType: keyboardType,
         cursorColor: AppColors.inputTextColor.withOpacity(0.5),
         decoration: InputDecoration(
-          label: Text(
-            isRequired == true ? "$hint*" : hint!,
-            style: Theme.of(context).textTheme.displayMedium,
+          label: CustomText(
+            text: isRequired == true ? "$hint*" : hint!,
           ),
           border: InputBorder.none,
           counterText: "",
